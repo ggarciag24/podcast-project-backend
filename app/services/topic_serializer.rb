@@ -11,7 +11,7 @@ class TopicSerializer < ApplicationController
       include: {
         podcasts: {
           include: {personal_notes: {
-            only: [:episode, :rating, :explanation]
+            except: [:created_at, :updated_at]
           }}, except: [:created_at, :updated_at]
         }
       }, except: [:created_at, :updated_at]
