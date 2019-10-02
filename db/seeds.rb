@@ -1,6 +1,6 @@
 
 Topic.destroy_all()
-motivation = Topic.find_or_create_by(name: "Motivation")
+motivation = Topic.find_or_create_by(name: "Motivational Podcasts")
 
 Podcast.destroy_all()
 garyv = Podcast.find_or_create_by(name: "GaryV", image: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Gary_Vaynerchuk_public_domain.jpg", description: "Realistic Motivation", topic_id: motivation.id)
