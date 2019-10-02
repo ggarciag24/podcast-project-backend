@@ -6,4 +6,6 @@ def index
 
   render json: TopicSerializer.new(topics).to_serialized_json
 end
+
+
 end

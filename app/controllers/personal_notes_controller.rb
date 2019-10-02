@@ -8,6 +8,15 @@ class PersonalNotesController < ApplicationController
     render json: PersonalNoteSerializer.new(note).to_serialized_json
   end
 
+  def update
+    
+    note = PersonalNote.find(params[:id])
+
+    note.update(notes_params)
+
+    render json: PersonalNoteSerializer.new(note).to_serialized_json
+  end
+
   def destroy
     # byebug
     note = PersonalNote.find(params[:id]).destroy
